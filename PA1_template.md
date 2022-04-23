@@ -2,9 +2,7 @@
 title: "Reproducible Research Project 1"
 author: "Chenran Zhang"
 date: "23/04/2022"
-output:
-  md_document:
-    variant: markdown_github
+
 ---
 
 ## Introduction
@@ -28,25 +26,7 @@ The dataset is stored in a comma-separated-value (CSV) file and there are a tota
 
 ```r
 library("data.table")
-```
-
-```
-## Warning: package 'data.table' was built under R version 4.0.3
-```
-
-```
-## data.table 1.13.6 using 4 threads (see ?getDTthreads).  Latest news: r-datatable.com
-```
-
-```r
 library(ggplot2)
-```
-
-```
-## Warning: package 'ggplot2' was built under R version 4.0.3
-```
-
-```r
 fileUrl <- "https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip"
 download.file(fileUrl, destfile = paste0(getwd(), '/repdata%2Fdata%2Factivity.zip'), method = "curl")
 unzip("repdata%2Fdata%2Factivity.zip",exdir = "data")
